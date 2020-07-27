@@ -8,14 +8,16 @@
     <title></title>
 </head>
 <body>
+<nav th:replace="index::navbar"></nav>
 <h1>Jobs by [[${author.name}]]</h1>
-<div th:each="job: ${author.job}">
+<div th:each="job: ${author.jobs}">
     Title: [[${job.title}]] <br>
     Description: [[${job.description}]]<br>
     Director: [[${job.author.name}]] <br>
     <a th:href="@{/deleteJob/{id}(id=${job.id})}"> <button type="button" class="btn btn-outline-danger">Delete</button></a>
     <a th:href="@{/updateJob/{id}(id=${job.id})}"><button type="button" class="btn btn-outline-secondary">Update</button></a>
     <a th:href="@{/detailsJobs/{id}(id=${job.id})}"><button type="button" class="btn btn-outline-secondary">Details</button></a>
+    <a th:href="@{/deleteAuthor/{id}(id=${author.id})}"> <button type="button" class="btn btn-outline-danger">Delete Account</button></a>
 
 </div>
 

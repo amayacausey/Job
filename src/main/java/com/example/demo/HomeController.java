@@ -86,7 +86,7 @@ public class HomeController {
     public String jobsByAuthor(@PathVariable("id") long id,Model model){
         model.addAttribute("authors",authorRepository.findAll());
         model.addAttribute("author",authorRepository.findById(id).get());
-      return "jobsByAuthor";
+      return "JobsByAuthor";
     }
 
 

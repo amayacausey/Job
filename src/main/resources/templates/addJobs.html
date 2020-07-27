@@ -8,6 +8,7 @@
     <title>addJob</title>
 </head>
 <body>
+<nav th:replace="index::navbar"></nav>
 <form th:action="@{/processJobs}" th:object="${job}" method="post">
     <input type="hidden" th:field="*{id}"/>
     Title : <input type="text" th:field="*{title}"><br>

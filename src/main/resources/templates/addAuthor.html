@@ -8,6 +8,7 @@
     <title>addAuthor</title>
 </head>
 <body>
+<nav th:replace="index::navbar"></nav>
 
 <form th:action="@{/processAuthor}" th:object="${author}" method="post">
     <input type="hidden" th:field="*{id}"/>
